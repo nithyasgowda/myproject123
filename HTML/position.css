@@ -1,0 +1,9 @@
+.div1{
+    height: 100px;
+    width: 300px;
+    background-color: red;
+    position: sticky;
+    top:0px;
+    /* left:20px; */
+}
+

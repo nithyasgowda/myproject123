@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --base-font-family: 'Roboto', sans-serif;
+    --base-color:rgba(0, 0, 0, 0.87);
+    --base-font-size:0.8rem;
+    --base-font-weight: 600;
+    --background-color: rgb(255, 255, 255);
+    --base-navbar-box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    --base-navbar-bg-color: #0D0E10;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    color: var(--base-color);
+    font-weight: var(--base-font-weight);
+    background-color: var(--background-color);
+}
+#_jio_cinema_header{
+    background-color: var(--base-navbar-bg-color);
+    box-shadow: var(--base-navbar-box-shadow);
+    color: #fff;
+    height: 80px;
+    width: 100%;
+}
+#_jio_cinema_header>article{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.logoBlock{
+    flex-basis: 20%;
+}
+
+.logoBlock img{
+    height: 45px;
+    width:45px;
+}
+.logoBlock a span{
+    margin-top: 10px;
+}
+
+.leftMainBlock{
+    flex-basis: 100%;
+    display: flex;
+    font-size: 1em;
+    font-weight: var(--base-font-weight);
+    letter-spacing: 0.1em;
+}
+.rightBlock{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.leftMainBlock nav ul{
+    height: 50px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 10px;
+}
+.leftMainBlock nav ul li{
+    gap:5px;
+}
+.leftMainBlock nav ul li a{
+    text-decoration: none;
+    padding: 15px;
+    color:white;
+}
+.logoBlock a{
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: var(--base-font-weight);
+}
+.Subscribe{
+    cursor: pointer;
+    padding: 7px 15px !important;
+    border: 1px solid rgb(175, 164, 42);
+    border-radius: 20px;
+    color: rgb(166, 166, 53) !important;
+    font-size: 12px !important;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.For_you{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 14px 14px !important;
+    margin-left: 10px;
+}
+.userBlock img{
+    height: 40px;
+    width:40px;
+    margin-left:7px;
+}
+
+.searchBlock{
+    position: relative;
+}
+
+.searchBlock input{
+    padding: 14px 30px;
+    border-radius: 30px;
+    background:transparent;
+    border:1px solid #676565fb;
+    font-size:14px;
+    text-transform: capitalize;
+}
+
+.searchBlock span:nth-of-type(2){
+    position: absolute;
+    right:20px;
+    top:12px;
+}
+.searchBlock .mic i{
+    font-size: 20px;
+}
+
+#right_login{
+    height:600px;
+    width:350px;
+    background-color:#0D0E10;
+    position: absolute;
+    left:1170px;
+    color:red;
+    /* display:none; */
+}
+
+#right_login header{
+    height: 100px;
+    width:350px;
+    border:1px solid red;
+    display:flex;
+}
+
+#right_login header .logo img{
+    height:50px;
+    width:50px;
+}
+
+/* #right_login header .logo guest{
+
+} */
+
+/* JIOCINEMA LOGIN BLOCK STARTS HERE */
+
+.sidebar_nav{
+    background-color: #111;
+    position: absolute;
+    top: 62px;
+    right: -76px;
+    width: 350px;
+    height: 100vh;
+    /* display: none; */
+}
+
+.sidebar_nav .container{
+   padding: 20px 30px;
+}
+
+.sidebar_nav .login_block{
+    display: flex;
+    padding: 10px 0 20px;
+    align-items: center;
+}
+
+.sidebar_nav .login_block figure{
+    flex-basis: 10%;
+}
+
+.sidebar_nav .login_block .guest{
+    flex-basis: 80%;
+    padding: 0 20px;
+}
+
+.sidebar_nav .login_block .arrow{
+    flex-basis: 10%;
+}
+
+.MuiSvgIcon-root{
+    user-select: none;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+    width: 0.6em;
+    height: 0.7em;
+    color: rgb(255, 255, 255);
+}
+
+.sidebar_nav a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.sidebar_nav .guest p:last-child a{
+    color: #999;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sidebar_nav main:nth-child(1) main{
+    padding: 20px 0;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar_nav main:nth-child(1) footer{
+    padding: 20px 0;
+}
+
+.userBlock label{
+    /* display: none; */
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    transform: translate(-30px, 0px);
+    transition: ease all 1s;
+    /* overflow: hidden; */
+    /* opacity: 0; */
+}
+
+.userBlock input[type="checkbox"]:checked + label{
+    display: block !important;
+    position: absolute;
+    top: 0px;
+    right: -380px;
+    /* overflow: visible; */
+    /* transform: translate(-30px, 0px);
+    transition: ease all 2s; */
+    /* transition: 0.5s; */
+}
+
+.userBlock{
+    position: relative;
+}
+
+.userBlock input[type="checkbox"] {
+    position: absolute;
+    top: -31px;
+    right: 0;
+    height: 102px;
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    opacity: 0;
+}
+/* JIOCINEMA LOGIN BLOCK ENDS HERE */
+
+
+
+
+/* JIOCINEMA SLIDER BLOCK STARTS HERE */
+
+#_main_slider_div{
+   position: relative;
+   height: 100%;
+   z-index: -1;
+}
+
+/* SLIDE 1 BEGINS */
+
+._jio_cinema_slider_1{
+    width:100%;
+    height: 100%;
+    background-color: #0D0E10;
+}
+
+._jio_cinema_slider_1 .container{
+    background-color: #0D0E10;
+}
+
+._jio_cinema_slider_1 .container aside{
+    display:flex;
+}
+
+
+._jio_cinema_slider_1 footer{
+    flex-basis: 40%;
+    height: 200px;
+    margin-top:350px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    color:white;
+    padding:0px 0px 0px 30px;
+} 
+
+._jio_cinema_slider_1 footer>span{
+    font-size:40px;
+    font-weight: 800;
+}
+
+._jio_cinema_slider_1 footer p span{
+    font-size:12px;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    color:gray;
+}
+
+
+
+._jio_cinema_slider_1 footer button{
+    font-size:12px;
+    height:40px;
+    width:120px;
+    border-radius: 5px;
+    background-color: #D9008D;;
+    border:none;
+    font-weight: bolder;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+._jio_cinema_slider_1 footer button i{
+    font-size: 17px;
+}
+
+
+
+._jio_cinema_slider_1 img{
+    width:100%;
+    object-fit: cover;
+    max-height:500px;
+    flex-basis: 60%;
+    border-radius:10px;
+    box-shadow: 0px 0px 60px rgba(140, 139, 139, 0.343);
+}
+/* SLIDE 1 ENDS */
+
+
+
+/* SLIDE 2 BEGINS */
+._jio_cinema_slider_2{
+    width:100%;
+    height: 100%;
+}
+
+._jio_cinema_slider_2{
+    position:absolute;
+    top:0px;
+    /* z-index:-1; */
+    left:100vw;
+}
+
+._jio_cinema_slider_2
+ .container aside{
+    display:flex;
+    background-color: #0D0E10;
+    /* gap:100px; */
+}
+
+
+
+._jio_cinema_slider_2 footer{
+    flex-basis: 40%;
+    height: 200px;
+    /* width:100px; */
+    /* border: 1px solid red; */
+    margin-top:350px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    color:white;
+    padding:0px 0px 0px 30px;
+} 
+
+._jio_cinema_slider_2 footer>span{
+    font-size:40px;
+    font-weight: 800;
+}
+
+._jio_cinema_slider_2 footer p span{
+    font-size:12px;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    color:gray;
+}
+
+
+
+._jio_cinema_slider_2 footer button{
+    font-size:12px;
+    height:40px;
+    width:120px;
+    border-radius: 5px;
+    background-color: #D9008D;;
+    border:none;
+    font-weight: bolder;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+._jio_cinema_slider_2 footer button i{
+    font-size: 17px;
+}
+
+
+
+._jio_cinema_slider_2 img{
+    width:100%;
+    object-fit: cover;
+    max-height:500px;
+    flex-basis: 60%;
+    border-radius:10px;
+    box-shadow: 0px 0px 60px rgba(140, 139, 139, 0.343);
+}
+
+/* SLIDE 2 ENDS */
+
+/* JIOCINEMA SLIDER BLOCK ENDS HERE */
+
+
+
+
+/* SLIDER ARROW BEGINS HERE */
+
+/* #_main_slider_div .checkbox_div{
+    height: 50px;
+    width: 200px;
+    border: 1px solid red;
+    position: relative;
+    left:700px;
+    top:10px;
+    display: flex;
+    gap:40px;
+}
+
+#_main_slider_div .checkbox_div input{
+    height:50px;
+    width:50px;
+}
+
+#_main_slider_div .slide1{
+    display: none;
+    top: 0px;
+    right: -30px;
+    transform: translate(-30px, 0px);
+    transition: ease all 1s;
+}
+
+#_main_slider_div input:nth-of-type(2):checked + label[for="slide2"]{
+    display:none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+} */
+/* SLIDER ARROW ENDS HERE */
+
+/* MOVIES POSTER BEGINS HERE  */
+
+#main_movie_part{
+    height: 400px;
+    width:100%;
+    /* border:2px solid #0D0E10; */
+    background-color: #0D0E10;
+    font-size: 22px;
+    color:#fff;
+    padding-left: 10px;
+}
+
+#main_movie_part .container h1{
+    margin-left: 10px;
+}
+
+
+#main_movie_part .container main{
+    display: flex;
+    align-items: center;
+
+}
+
+#main_movie_part .container aside{
+    margin: 20px 5px 20px 10px;
+}
+
+#main_movie_part .container aside img{
+    height: 300px;
+    width:230px;
+    border-radius: 10px;
+}
+
+/* MOVIES POSTER ENDS HERE  */
+
+
+
+/* SPORTS SECTION BEGINS HERE */
+
+#main_sports_section{
+    height: 270px;
+    width:100%;
+    /* border:2px solid #8c1313; */
+    background-color: #0D0E10;
+    padding-left: 10px;
+}
+
+#main_sports_section .container h1{
+    margin-left: 10px;
+    font-size: 22px;
+    color:#fff;
+
+}
+
+#main_sports_section .container main{
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin: 20px 0px 0px 10px;
+}
+
+#main_sports_section .container aside{
+    height: 155px;
+    width:155px;
+    /* border: 1px solid red; */
+    background-color: #1c1c1d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#main_sports_section .container aside:hover{
+    background-color: #3a3a3b;
+    transition: 0.5s;
+}
+#main_sports_section .container aside img{
+    height: 155px;
+    width:155px;
+    
+}
+
+/* SPORTS SECTION ENDS HERE */
+
+
+
+/* FOOTER BEGINS HERE */
+
+#main_footer{
+    height:340px;
+    width:100%;
+    color:#fff;
+    background-color: #1a1a1b;
+    border:2px solid  #1a1a1b;
+    letter-spacing: 1px;
+}
+
+#main_footer .footer_first_section{
+    height: 200px;
+    display:flex;
+    margin: 50px 0px 0px 20px;
+    /* border:2px solid red; */
+}
+#main_footer .footer_first_section .left_part{
+    height: 200px;
+    flex-basis: 60%;
+    /* border:2px solid red; */
+    display: flex;
+    column-gap: 80px;
+}
+
+#main_footer .footer_first_section .right_part{
+    height: 200px;
+    flex-basis: 40%;
+    /* border:2px solid red; */
+}
+
+
+#main_footer .footer_first_section .left_part .list_1{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+
+}
+
+
+#main_footer .footer_first_section .left_part .list_2{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+
+}
+
+#main_footer .footer_first_section .left_part .list_1 p{
+    font-size:16px;
+    font-weight:bolder;
+}
+
+#main_footer .footer_first_section .left_part .list_1 ul{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    list-style: none;
+    font-size:13px;
+}
+
+#main_footer .footer_first_section .left_part .list_2 p{
+    font-size:16px;
+    font-weight:bolder;
+    letter-spacing: 1px;
+}
+
+#main_footer .footer_first_section .left_part .list_2 ul{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    list-style: none;
+    font-size:13px;
+}
+
+#main_footer .footer_second_section{
+    height:90px;
+    background-color: rgb(34, 34, 34);
+}
+
+#main_footer .footer_first_section .right_part .contact_1{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+#main_footer .footer_first_section .right_part{
+    display: flex;
+    gap:50px;
+}
+
+#main_footer .footer_first_section .right_part .contact_1 p{
+    font-size:25px;
+    font-weight: 800;
+}
+#main_footer .footer_first_section .right_part .contact_2 p{
+    font-size:25px;
+    font-weight: 800;
+}
+#main_footer .footer_first_section .right_part .contact_1 main{
+    display:flex;
+    gap:12px;
+    color:#fff;
+}
+
+#main_footer .footer_first_section .right_part .contact_1 main div{
+    height: 60px;
+    width:60px;
+    /* border:1px solid red; */
+    background-color:  #3a3a3b;
+    border-radius: 50%;
+    position:relative;
+}
+#main_footer .footer_first_section .right_part .contact_1 main div i{
+    position: absolute;
+    font-size:20px;
+    top:20px;
+    left:20px
+}
+
+#main_footer .footer_first_section .right_part .contact_2{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+#main_footer .footer_first_section .right_part .contact_2 .app img{
+    height: 70px;
+    width: 100px;
+}
+
+#main_footer .footer_second_section{
+    display:flex;
+    align-items: center;
+    background-color:  #262626;
+    border-top:0.1px solid #4d4d4d;
+}
+
+#main_footer .footer_second_section .copyright{
+    flex-basis: 90%;
+    padding-left: 20px;
+    flex-grow: 2;
+    font-size: 12px;
+    font-weight: 200;
+}
+#main_footer .footer_second_section .footer_jio_logo{
+    flex-basis: 20%;
+    flex-grow: 1;
+
+}
+#main_footer .footer_second_section .footer_jio_logo img{
+    height: 55px;
+    width:55px;
+    flex-basis: 50%;
+    margin-left:200px;
+}
+
+/* FOOTER ENDS HERE */
+
+
